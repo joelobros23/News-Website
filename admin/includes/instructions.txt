@@ -1,0 +1,8 @@
+For connecting to CPANEL database, go to db_connect.php and you will see similir codes shown below:
+
+define('DB_SERVER', 'localhost'); // Or your cPanel MySQL server hostname
+define('DB_USERNAME', 'root'); // Your cPanel MySQL username
+define('DB_PASSWORD', ''); // Your cPanel MySQL password
+define('DB_NAME', 'news_week_db');     // The name of your database
+
+Fill that with your database informations and always remember that "localhost" is always the DB Server even you connect to web hosting server, so don't be confuse.

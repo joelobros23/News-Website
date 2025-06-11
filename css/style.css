@@ -1,0 +1,63 @@
+/* css/style.css */
+
+/* Import Inter font (if not relying solely on Tailwind's default stack or CDN) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Example: Smoother font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.prose h1 {
+    font-size: 2.25em; /* Example value */
+    margin-top: 0;
+    margin-bottom: 0.8888889em;
+    font-weight: 800;
+}
+
+/* Custom utility for line clamping text (Tailwind has a plugin for this, but a CSS fallback is good) */
+.line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Show 3 lines */
+    /* Fallback for browsers that don't support -webkit-line-clamp */
+    max-height: calc(1.5em * 3); /* Assuming line-height of 1.5em, adjust as needed */
+}
+
+.line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Show 2 lines */
+    max-height: calc(1.5em * 2); 
+}
+
+
+/* Additional custom styles for your news site can go here */
+/* For example, specific link styling not covered by Tailwind, or unique component styles */
+
+/* Example: Custom border color for the "Latest News" heading */
+/* Tailwind handles this with border-blue-500, but if you wanted a very specific custom color: */
+
+.latest-news-heading {
+    border-bottom: 2px solid #yourCustomColor;
+}
+*/
+
+/* Ensure images within article cards maintain aspect ratio if not handled by object-cover */
+.article-card-image {
+    aspect-ratio: 16 / 9; /* Or your preferred aspect ratio */
+    object-fit: cover;
+}
+
+/* Styling for dynamically added tags if needed */
+.tag {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.tag:hover {
+    opacity: 0.85;
+}
+
